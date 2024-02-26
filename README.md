@@ -1,1 +1,1 @@
-Mobile App Clothing Shop App in iOS using Swift 
+Mobile App - Clothing Shop Online in iOS using Swift 
