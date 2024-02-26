@@ -9,7 +9,7 @@ struct AuthView: View {
             LoginView(currentShowingView: $currentViewShowing)
                 .preferredColorScheme(.light)
         } else {
-            SignupView(currentShowingView: $currentViewShowing)
+            SignUpView(currentShowingView: $currentViewShowing)
                 .preferredColorScheme(.dark)
                 .transition(.move(edge: .bottom))
         }
