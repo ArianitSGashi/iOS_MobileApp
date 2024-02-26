@@ -1,11 +1,12 @@
 import SwiftUI
-//import FirebaseAuth
+import FirebaseAuth
 
 struct SignupView: View {
+    @Binding var currentShowingView: String
     @State private var email: String = ""
     @State private var password: String = ""
     @AppStorage("uid") var userID: String = ""
-    @Binding var currentShowingView: String
+    
     
     private func isValidPassword(_ password: String) -> Bool {
         // minimum 6 characters long
@@ -102,20 +103,20 @@ struct SignupView: View {
                 
                 Button {
                     
-//              
-//                    Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-//                        
-//                        if let error = error {
-//                            print(error)
-//                            return
-//                        }
-//                        
-//                        if let authResult = authResult {
-//                            print(authResult.user.uid)
-//                            userID = authResult.user.uid
-//                            
-//                        }
-//                    }
+              
+                    Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                        
+                        if let error = error {
+                            print(error)
+                            return
+                        }
+                        
+                        if let authResult = authResult {
+                            print(authResult.user.uid)
+                            userID = authResult.user.uid
+                            
+                        }
+                    }
                     
                 } label: {
                     Text("Create New Account")
@@ -141,3 +142,10 @@ struct SignupView: View {
 }
 
 
+
+struct SignupView_Previews: PreviewProvider {
+    @State static var currentShowingView: String = "" // Provide a binding for currentShowingView
+    static var previews: some View {
+        SignupView(currentShowingView: $currentShowingView)
+    }
+}
