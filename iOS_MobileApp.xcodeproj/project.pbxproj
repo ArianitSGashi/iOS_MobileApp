@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF0417412B8D1F650048442B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0417402B8D1F650048442B /* Assets.xcassets */; };
 		BF0417442B8D20910048442B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0417432B8D20910048442B /* Product.swift */; };
+		BF0417472B8D21FC0048442B /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0417462B8D21FC0048442B /* ProductCard.swift */; };
 		BFF0BE5B2B8CC52A005D9849 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5A2B8CC52A005D9849 /* LoginView.swift */; };
 		BFF0BE5E2B8CC674005D9849 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5D2B8CC674005D9849 /* String.swift */; };
 		BFF0BE602B8CC745005D9849 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5F2B8CC745005D9849 /* SignUpView.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		BF0417402B8D1F650048442B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../SweaterShopApp-main/SweaterShopApp/Assets.xcassets"; sourceTree = "<group>"; };
 		BF0417432B8D20910048442B /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		BF0417462B8D21FC0048442B /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		BFF0BE5A2B8CC52A005D9849 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BFF0BE5D2B8CC674005D9849 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BFF0BE5F2B8CC745005D9849 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -56,9 +58,18 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		BF0417452B8D21D40048442B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BF0417462B8D21FC0048442B /* ProductCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		BFF0BE592B8CC50F005D9849 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BFF3103E2B8CBE2100E3E8E8 /* ContentView.swift */,
 				BFF0BE5A2B8CC52A005D9849 /* LoginView.swift */,
 				BFF0BE5F2B8CC745005D9849 /* SignUpView.swift */,
 				BFF0BE612B8CD538005D9849 /* AuthView.swift */,
@@ -93,12 +104,12 @@
 		BFF3103B2B8CBE2100E3E8E8 /* iOS_MobileApp */ = {
 			isa = PBXGroup;
 			children = (
+				BF0417452B8D21D40048442B /* Components */,
 				BF0417422B8D204B0048442B /* Models */,
 				BFF5F12A2B8CE62F0015FECA /* GoogleService-Info.plist */,
 				BFF0BE5C2B8CC65A005D9849 /* Extensions */,
 				BFF0BE592B8CC50F005D9849 /* Views */,
 				BFF3103C2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift */,
-				BFF3103E2B8CBE2100E3E8E8 /* ContentView.swift */,
 				BF0417402B8D1F650048442B /* Assets.xcassets */,
 				BFF310422B8CBE2600E3E8E8 /* Preview Content */,
 			);
@@ -198,6 +209,7 @@
 				BFF0BE5E2B8CC674005D9849 /* String.swift in Sources */,
 				BFF3103D2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift in Sources */,
 				BF0417442B8D20910048442B /* Product.swift in Sources */,
+				BF0417472B8D21FC0048442B /* ProductCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
