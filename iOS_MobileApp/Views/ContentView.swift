@@ -3,7 +3,8 @@ import SwiftUI
 import FirebaseAuth
 
 struct ContentView: View {
-    
+    @StateObject var cartManager = CartManager()
+    var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
     @AppStorage("uid") var userID: String = ""
     
     var body: some View {
@@ -51,9 +52,10 @@ struct ContentView: View {
             }
             .navigationViewStyle(StackNavigationViewStyle())
         }
-        }
     }
 }
+
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
