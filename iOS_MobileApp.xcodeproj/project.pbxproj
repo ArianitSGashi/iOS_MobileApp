@@ -15,6 +15,7 @@
 		BF04174D2B8D2A980048442B /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF04174C2B8D2A980048442B /* ProductRow.swift */; };
 		BF04174F2B8D2B7C0048442B /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF04174E2B8D2B7C0048442B /* PaymentButton.swift */; };
 		BF0417562B8D31990048442B /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0417552B8D31990048442B /* CartManager.swift */; };
+		BF0417582B8D33910048442B /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0417572B8D33910048442B /* PaymentHandler.swift */; };
 		BFF0BE5B2B8CC52A005D9849 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5A2B8CC52A005D9849 /* LoginView.swift */; };
 		BFF0BE5E2B8CC674005D9849 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5D2B8CC674005D9849 /* String.swift */; };
 		BFF0BE602B8CC745005D9849 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5F2B8CC745005D9849 /* SignUpView.swift */; };
@@ -37,6 +38,7 @@
 		BF04174E2B8D2B7C0048442B /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
 		BF0417542B8D2FBF0048442B /* iOS_MobileApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS_MobileApp.entitlements; sourceTree = "<group>"; };
 		BF0417552B8D31990048442B /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		BF0417572B8D33910048442B /* PaymentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
 		BFF0BE5A2B8CC52A005D9849 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BFF0BE5D2B8CC674005D9849 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BFF0BE5F2B8CC745005D9849 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				BFF3103C2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift */,
 				BF0417402B8D1F650048442B /* Assets.xcassets */,
 				BFF310422B8CBE2600E3E8E8 /* Preview Content */,
+				BF0417572B8D33910048442B /* PaymentHandler.swift */,
 			);
 			path = iOS_MobileApp;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				BF04174F2B8D2B7C0048442B /* PaymentButton.swift in Sources */,
 				BF0417562B8D31990048442B /* CartManager.swift in Sources */,
 				BF04174B2B8D28260048442B /* CartView.swift in Sources */,
+				BF0417582B8D33910048442B /* PaymentHandler.swift in Sources */,
 				BFF0BE5B2B8CC52A005D9849 /* LoginView.swift in Sources */,
 				BFF0BE602B8CC745005D9849 /* SignUpView.swift in Sources */,
 				BFF0BE622B8CD538005D9849 /* AuthView.swift in Sources */,
