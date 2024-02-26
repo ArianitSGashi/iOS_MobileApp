@@ -34,6 +34,10 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environment(\.colorScheme, .dark) // You can adjust the color scheme as needed
+            .onAppear {
+                // Set a dummy user ID for preview
+                UserDefaults.standard.set("dummy_user_id", forKey: "uid")
+            }
     }
 }
-

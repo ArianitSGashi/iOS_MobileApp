@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0417412B8D1F650048442B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0417402B8D1F650048442B /* Assets.xcassets */; };
 		BFF0BE5B2B8CC52A005D9849 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5A2B8CC52A005D9849 /* LoginView.swift */; };
 		BFF0BE5E2B8CC674005D9849 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5D2B8CC674005D9849 /* String.swift */; };
 		BFF0BE602B8CC745005D9849 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5F2B8CC745005D9849 /* SignUpView.swift */; };
 		BFF0BE622B8CD538005D9849 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE612B8CD538005D9849 /* AuthView.swift */; };
 		BFF3103D2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3103C2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift */; };
 		BFF3103F2B8CBE2100E3E8E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3103E2B8CBE2100E3E8E8 /* ContentView.swift */; };
-		BFF310412B8CBE2600E3E8E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF310402B8CBE2600E3E8E8 /* Assets.xcassets */; };
 		BFF310442B8CBE2600E3E8E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF310432B8CBE2600E3E8E8 /* Preview Assets.xcassets */; };
 		BFF5F12B2B8CE62F0015FECA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFF5F12A2B8CE62F0015FECA /* GoogleService-Info.plist */; };
 		BFF5F12E2B8CE7300015FECA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BFF5F12D2B8CE7300015FECA /* FirebaseAuth */; };
@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF0417402B8D1F650048442B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../SweaterShopApp-main/SweaterShopApp/Assets.xcassets"; sourceTree = "<group>"; };
 		BFF0BE5A2B8CC52A005D9849 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BFF0BE5D2B8CC674005D9849 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		BFF0BE5F2B8CC745005D9849 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -28,7 +29,6 @@
 		BFF310392B8CBE2100E3E8E8 /* iOS_MobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_MobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3103C2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_MobileAppApp.swift; sourceTree = "<group>"; };
 		BFF3103E2B8CBE2100E3E8E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BFF310402B8CBE2600E3E8E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFF310432B8CBE2600E3E8E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BFF5F12A2B8CE62F0015FECA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,7 +88,7 @@
 				BFF0BE592B8CC50F005D9849 /* Views */,
 				BFF3103C2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift */,
 				BFF3103E2B8CBE2100E3E8E8 /* ContentView.swift */,
-				BFF310402B8CBE2600E3E8E8 /* Assets.xcassets */,
+				BF0417402B8D1F650048442B /* Assets.xcassets */,
 				BFF310422B8CBE2600E3E8E8 /* Preview Content */,
 			);
 			path = iOS_MobileApp;
@@ -168,7 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF310442B8CBE2600E3E8E8 /* Preview Assets.xcassets in Resources */,
-				BFF310412B8CBE2600E3E8E8 /* Assets.xcassets in Resources */,
+				BF0417412B8D1F650048442B /* Assets.xcassets in Resources */,
 				BFF5F12B2B8CE62F0015FECA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

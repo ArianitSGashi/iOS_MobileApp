@@ -1,7 +1,7 @@
 import SwiftUI
 import FirebaseAuth
 
-struct SignupView: View {
+struct SignUpView: View {
     @Binding var currentShowingView: String
     @State private var email: String = ""
     @State private var password: String = ""
@@ -143,9 +143,9 @@ struct SignupView: View {
 
 
 
-struct SignupView_Previews: PreviewProvider {
+struct SignUpView_Previews: PreviewProvider {
     @State static var currentShowingView: String = "" // Provide a binding for currentShowingView
     static var previews: some View {
-        SignupView(currentShowingView: $currentShowingView)
+        SignUpView(currentShowingView: $currentShowingView)
     }
 }
