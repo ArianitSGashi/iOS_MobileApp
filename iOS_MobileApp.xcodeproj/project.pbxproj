@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFF0BE5B2B8CC52A005D9849 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5A2B8CC52A005D9849 /* LoginView.swift */; };
+		BFF0BE5E2B8CC674005D9849 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5D2B8CC674005D9849 /* String.swift */; };
+		BFF0BE602B8CC745005D9849 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5F2B8CC745005D9849 /* SignUpView.swift */; };
 		BFF3103D2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3103C2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift */; };
 		BFF3103F2B8CBE2100E3E8E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF3103E2B8CBE2100E3E8E8 /* ContentView.swift */; };
 		BFF310412B8CBE2600E3E8E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF310402B8CBE2600E3E8E8 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BFF0BE5A2B8CC52A005D9849 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BFF0BE5D2B8CC674005D9849 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		BFF0BE5F2B8CC745005D9849 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BFF310392B8CBE2100E3E8E8 /* iOS_MobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_MobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3103C2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_MobileAppApp.swift; sourceTree = "<group>"; };
 		BFF3103E2B8CBE2100E3E8E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BFF0BE592B8CC50F005D9849 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFF0BE5A2B8CC52A005D9849 /* LoginView.swift */,
+				BFF0BE5F2B8CC745005D9849 /* SignUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFF0BE5C2B8CC65A005D9849 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFF0BE5D2B8CC674005D9849 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BFF310302B8CBE2100E3E8E8 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +74,8 @@
 		BFF3103B2B8CBE2100E3E8E8 /* iOS_MobileApp */ = {
 			isa = PBXGroup;
 			children = (
+				BFF0BE5C2B8CC65A005D9849 /* Extensions */,
+				BFF0BE592B8CC50F005D9849 /* Views */,
 				BFF3103C2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift */,
 				BFF3103E2B8CBE2100E3E8E8 /* ContentView.swift */,
 				BFF310402B8CBE2600E3E8E8 /* Assets.xcassets */,
@@ -137,7 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF0BE5B2B8CC52A005D9849 /* LoginView.swift in Sources */,
+				BFF0BE602B8CC745005D9849 /* SignUpView.swift in Sources */,
 				BFF3103F2B8CBE2100E3E8E8 /* ContentView.swift in Sources */,
+				BFF0BE5E2B8CC674005D9849 /* String.swift in Sources */,
 				BFF3103D2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
