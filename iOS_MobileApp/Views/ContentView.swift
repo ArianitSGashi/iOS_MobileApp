@@ -12,24 +12,6 @@ struct ContentView: View {
         if userID == "" {
             AuthView()
         } else {
-            //            Text("Logged In! \nYour user id is \(userID)")
-            //
-            //            Button(action: {
-            //                let firebaseAuth = Auth.auth()
-            //                do {
-            //                    try firebaseAuth.signOut()
-            //                    withAnimation {
-            //                        userID = ""
-            //                    }
-            //                } catch let signOutError as NSError {
-            //                    print("Error signing out: %@", signOutError)
-            //                }
-            //            }) {
-            //                Text("Sign Out")
-            //            }
-            //        }
-            //
-            //There are some todo files that will be created soon
             NavigationView {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
@@ -40,13 +22,15 @@ struct ContentView: View {
                     }
                     .padding()
                 }
-                .navigationTitle(Text("Sweater Shop"))
+                .navigationTitle(Text("Clothing Shop"))
                 .toolbar {
                     NavigationLink {
                         CartView()
                             .environmentObject(cartManager)
                     } label: {
+                        SignOutButton()
                         CartButton(numberOfProducts: cartManager.products.count)
+                        
                     }
                 }
             }
