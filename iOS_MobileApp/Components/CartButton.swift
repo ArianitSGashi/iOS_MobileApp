@@ -6,7 +6,7 @@ struct CartButton: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             Image(systemName: "cart")
-                .padding(.top, 5)
+                .padding(.top, 5).padding(.trailing,10)
 
             if numberOfProducts > 0 {
                 Text("\(numberOfProducts)")
