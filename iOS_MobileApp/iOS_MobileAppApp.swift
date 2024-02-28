@@ -10,6 +10,7 @@ import FirebaseCore
 
 @main
 struct iOS_MobileAppApp: App {
+    var cartManager = CartManager()
     
     init(){
         FirebaseApp.configure()
@@ -18,6 +19,6 @@ struct iOS_MobileAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }
+            .environmentObject(cartManager)        }
     }
 }

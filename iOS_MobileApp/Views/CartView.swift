@@ -1,18 +1,17 @@
 import SwiftUI
-
 struct CartView: View {
     @EnvironmentObject var cartManager: CartManager
     
     var body: some View {
-        ScrollView {
+        VStack {
             if cartManager.paymentSuccess {
-                Text("Thanks for your purchase! You'll get cozy in our comfy sweaters soon! You'll also receive an email confirmation shortly.")
+                Text("Thanks for your purchase!")
                     .padding()
             } else {
                 if cartManager.products.count > 0 {
-                    ForEach(cartManager.products, id: \.id) { product in
-                        ProductRow(product: product)
-                    }
+                    TableViewWrapper()
+                                .environmentObject(cartManager)
+                        .frame(height: 300) // Adjust the height as needed
                     
                     HStack {
                         Text("Your cart total is")
@@ -24,7 +23,6 @@ struct CartView: View {
                     
                     PaymentButton(action: cartManager.pay)
                         .padding()
-                    
                 } else {
                     Text("Your cart is empty.")
                 }
@@ -37,12 +35,5 @@ struct CartView: View {
                 cartManager.paymentSuccess = false
             }
         }
-    }
-}
-
-struct CartView_Previews: PreviewProvider {
-    static var previews: some View {
-        CartView()
-            .environmentObject(CartManager())
     }
 }

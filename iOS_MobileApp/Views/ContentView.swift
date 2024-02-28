@@ -24,13 +24,15 @@ struct ContentView: View {
                 }
                 .navigationTitle(Text("Clothing Shop"))
                 .toolbar {
-                    NavigationLink {
-                        CartView()
-                            .environmentObject(cartManager)
-                    } label: {
-                        SignOutButton()
-                        CartButton(numberOfProducts: cartManager.products.count)
-                        
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        NavigationLink {
+                            CartView()
+                                .environmentObject(cartManager)
+                        } label: {
+                            SignOutButton()
+                            CartButton(numberOfProducts: cartManager.products.count)
+                            
+                        }
                     }
                 }
             }
