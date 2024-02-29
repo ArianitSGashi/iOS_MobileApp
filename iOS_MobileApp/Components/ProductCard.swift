@@ -6,41 +6,42 @@ struct ProductCard: View {
     var product: Product
     
     var body: some View {
-        ZStack(alignment: .topTrailing) {
-            ZStack(alignment: .bottom) {
-                Image(product.image)
-                    .resizable()
-                    .cornerRadius(20)
-                    .frame(width: 180)
-                    .scaledToFit()
-                
-                VStack(alignment: .leading) {
-                    Text(product.name)
-                        .bold()
-                    
-                    Text("\(product.price)$")
-                        .font(.caption)
-                }
-                .padding()
-                .frame(width: 180, alignment: .leading)
-                .background(.ultraThinMaterial)
+        VStack {
+            Image(product.image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 180, height: 180)
                 .cornerRadius(20)
+                .padding()
+            
+            VStack(alignment: .leading, spacing: 8) {
+                Text(product.name)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                
+                Text("$\(product.price)")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
             }
-            .frame(width: 180, height: 250)
-            .shadow(radius: 3)
+            .padding(.horizontal)
             
             Button(action: {
                 cartManager.addToCart(product: product)
                 dataController.saveProductAsClothes(product: product)
             }) {
-                Image(systemName: "plus")
-                    .padding(10)
+                Text("Add to Cart")
                     .foregroundColor(.white)
-                    .background(.black)
-                    .cornerRadius(50)
                     .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    .padding(.horizontal)
             }
+            .padding(.bottom)
         }
+        .background(Color.white)
+        .cornerRadius(20)
+        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 5)
     }
 }
 
