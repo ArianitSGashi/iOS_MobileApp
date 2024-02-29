@@ -93,6 +93,7 @@
 				BF46762D2B8D626E002338FA /* SignOutButton.swift */,
 				BF2CD2072B8F3237003820D5 /* UITableView.swift */,
 				BF2CD2092B8F39B1003820D5 /* UITableViewCell.swift */,
+				BF0417572B8D33910048442B /* PaymentHandler.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -145,7 +146,6 @@
 				BFF3103C2B8CBE2100E3E8E8 /* iOS_MobileAppApp.swift */,
 				BF0417402B8D1F650048442B /* Assets.xcassets */,
 				BFF310422B8CBE2600E3E8E8 /* Preview Content */,
-				BF0417572B8D33910048442B /* PaymentHandler.swift */,
 			);
 			path = iOS_MobileApp;
 			sourceTree = "<group>";

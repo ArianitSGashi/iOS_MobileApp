@@ -11,7 +11,7 @@ struct LoginView: View {
     @State private var alertMessage = ""
     
     private func isValidPassword(_ password: String) -> Bool {
-        // Your password validation logic goes here
+        
         let passwordRegex = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z]).{6,}$")
         return passwordRegex.evaluate(with: password)
     }
@@ -115,7 +115,7 @@ struct LoginView: View {
             
             if let authResult = authResult {
                 userID = authResult.user.uid
-                // Navigate to next screen or perform any other action upon successful sign in
+                
             }
         }
     }

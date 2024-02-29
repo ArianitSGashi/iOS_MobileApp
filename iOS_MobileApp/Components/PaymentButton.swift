@@ -42,7 +42,7 @@ extension PaymentButton {
         init(action: @escaping () -> Void) {
             self.action = action
             super.init()
-
+            
             button.addTarget(self, action: #selector(callback(_:)), for: .touchUpInside)
         }
         

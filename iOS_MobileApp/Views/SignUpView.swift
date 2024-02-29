@@ -10,8 +10,7 @@ struct SignUpView: View {
     @AppStorage("uid") var userID: String = ""
     
     private func isValidPassword(_ password: String) -> Bool {
-        // Your password validation logic goes here
-        // Example:
+        
         let passwordRegex = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z]).{6,}$")
         return passwordRegex.evaluate(with: password)
     }
@@ -115,7 +114,7 @@ struct SignUpView: View {
             showAlert(message: "Invalid email and password")
             return
         }
-
+        
         guard email.isValidEmail() else {
             showAlert(message: "Invalid email address")
             return
@@ -135,7 +134,7 @@ struct SignUpView: View {
             
             if let authResult = authResult {
                 userID = authResult.user.uid
-                // Perform any other action upon successful sign up
+                
             }
         }
     }

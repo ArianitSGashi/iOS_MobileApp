@@ -2,6 +2,7 @@ import SwiftUI
 import FirebaseAuth
 struct SignOutButton: View {
     @AppStorage("uid") var userID: String = ""
+    
     var body: some View {
         Button(action: {
             let firebaseAuth = Auth.auth()

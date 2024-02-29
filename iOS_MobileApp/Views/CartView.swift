@@ -10,8 +10,8 @@ struct CartView: View {
             } else {
                 if cartManager.products.count > 0 {
                     TableViewWrapper()
-                                .environmentObject(cartManager)
-                        .frame(height: 300) // Adjust the height as needed
+                        .environmentObject(cartManager)
+                        .frame(height: 300)
                     
                     HStack {
                         Text("Your cart total is")

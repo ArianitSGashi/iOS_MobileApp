@@ -1,7 +1,6 @@
 import Foundation
 import PassKit
 
-// Typealias so we don't always need to rewrite the type (Bool) -> Void
 typealias PaymentCompletionHandler = (Bool) -> Void
 
 class PaymentHandler: NSObject {
@@ -11,22 +10,20 @@ class PaymentHandler: NSObject {
     var paymentStatus = PKPaymentAuthorizationStatus.failure
     var completionHandler: PaymentCompletionHandler?
     
-   
+    
     var products: [Product] = []
     var dataController: DataController?
-
+    
     static let supportedNetworks: [PKPaymentNetwork] = [
         .visa,
         .masterCard,
     ]
     
-    // This applePayStatus function is not used in this app. Use it to check for the ability to make payments using canMakePayments(), and check for available payment cards using canMakePayments(usingNetworks:). You can also display a custom PaymentButton according to the result. See https://developer.apple.com/documentation/passkit/apple_pay/offering_apple_pay_in_your_app under "Add the Apple Pay Button" section
     class func applePayStatus() -> (canMakePayments: Bool, canSetupCards: Bool) {
         return (PKPaymentAuthorizationController.canMakePayments(),
-                PKPaymentAuthorizationController.canMakePayments(usingNetworks: supportedNetworks))
+                PKPaymentAuthorizationController.canMakePayments(usingNetworks: supportedNetworks))
     }
     
-    // Define the shipping methods (this app only offers delivery) and the delivery dates
     func shippingMethodCalculator() -> [PKShippingMethod] {
         
         let today = Date()
@@ -52,32 +49,28 @@ class PaymentHandler: NSObject {
     func startPayment(products: [Product], total: Double, completion: @escaping PaymentCompletionHandler) {
         completionHandler = completion
         
-        // Reset the paymentSummaryItems array before adding to it
         paymentSummaryItems = []
         
-        // Iterate over the products array, create a PKPaymentSummaryItem for each and append to the paymentSummaryItems array
         products.forEach { product in
             let item = PKPaymentSummaryItem(label: product.name, amount: NSDecimalNumber(string: "\(product.price).00"), type: .final)
             paymentSummaryItems.append(item)
         }
         
-        // Add a PKPaymentSummaryItem for the total to the paymentSummaryItems array
+        
         let total = PKPaymentSummaryItem(label: "Total", amount: NSDecimalNumber(string: "\(total).00"), type: .final)
         paymentSummaryItems.append(total)
         
-        // Create a payment request and add all data to it
         let paymentRequest = PKPaymentRequest()
-        paymentRequest.paymentSummaryItems = paymentSummaryItems // Set paymentSummaryItems to the paymentRequest
+        paymentRequest.paymentSummaryItems = paymentSummaryItems
         paymentRequest.merchantIdentifier = "merchant.io.designcode.sweatershopapp"
-        paymentRequest.merchantCapabilities = .capability3DS // A security protocol used to authenticate users
+        paymentRequest.merchantCapabilities = .capability3DS
         paymentRequest.countryCode = "US"
         paymentRequest.currencyCode = "USD"
-        paymentRequest.supportedNetworks = PaymentHandler.supportedNetworks // Types of cards supported
+        paymentRequest.supportedNetworks = PaymentHandler.supportedNetworks
         paymentRequest.shippingType = .delivery
         paymentRequest.shippingMethods = shippingMethodCalculator()
         paymentRequest.requiredShippingContactFields = [.name, .postalAddress]
         
-        // Display the payment request in a sheet presentation
         paymentController = PKPaymentAuthorizationController(paymentRequest: paymentRequest)
         paymentController?.delegate = self
         paymentController?.present(completion: { (presented: Bool) in
@@ -90,35 +83,33 @@ class PaymentHandler: NSObject {
     }
 }
 
-// Set up PKPaymentAuthorizationControllerDelegate conformance
+
 extension PaymentHandler: PKPaymentAuthorizationControllerDelegate {
-
-    // Handle success and errors related to the payment
+    
     func paymentAuthorizationController(_ controller: PKPaymentAuthorizationController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
-
+        
         let errors = [Error]()
         let status = PKPaymentAuthorizationStatus.success
-
+        
         self.paymentStatus = status
         completion(PKPaymentAuthorizationResult(status: status, errors: errors))
     }
-
+    
     func paymentAuthorizationControllerDidFinish(_ controller: PKPaymentAuthorizationController) {
         controller.dismiss {
             
-                        DispatchQueue.main.async {
-                            if self.paymentStatus == .success {
-                                // Save each sold product using DataController
-                                self.products.forEach { product in
-                                    self.dataController?.saveProductAsClothes(product: product) // Adjust quantity as needed
-                                }
-                                self.completionHandler?(true)
-                            } else {
-                                self.completionHandler?(false)
-                            }
-                        }
-                    
-                
+            DispatchQueue.main.async {
+                if self.paymentStatus == .success {
+                    self.products.forEach { product in
+                        self.dataController?.saveProductAsClothes(product: product)
+                    }
+                    self.completionHandler?(true)
+                } else {
+                    self.completionHandler?(false)
+                }
+            }
+            
+            
             DispatchQueue.main.async {
                 if self.paymentStatus == .success {
                     if let completionHandler = self.completionHandler {
