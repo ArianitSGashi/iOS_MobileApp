@@ -16,8 +16,10 @@
 		BF04174F2B8D2B7C0048442B /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF04174E2B8D2B7C0048442B /* PaymentButton.swift */; };
 		BF0417562B8D31990048442B /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0417552B8D31990048442B /* CartManager.swift */; };
 		BF0417582B8D33910048442B /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0417572B8D33910048442B /* PaymentHandler.swift */; };
+		BF087D562B909B9100A376D2 /* ProductModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF087D542B909B9100A376D2 /* ProductModel.xcdatamodeld */; };
 		BF2CD2082B8F3237003820D5 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CD2072B8F3237003820D5 /* UITableView.swift */; };
 		BF2CD20A2B8F39B1003820D5 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CD2092B8F39B1003820D5 /* UITableViewCell.swift */; };
+		BF2CD20F2B8F64EA003820D5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CD20E2B8F64EA003820D5 /* DataController.swift */; };
 		BF46762E2B8D626E002338FA /* SignOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46762D2B8D626E002338FA /* SignOutButton.swift */; };
 		BFF0BE5B2B8CC52A005D9849 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5A2B8CC52A005D9849 /* LoginView.swift */; };
 		BFF0BE5E2B8CC674005D9849 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0BE5D2B8CC674005D9849 /* String.swift */; };
@@ -42,8 +44,10 @@
 		BF0417542B8D2FBF0048442B /* iOS_MobileApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS_MobileApp.entitlements; sourceTree = "<group>"; };
 		BF0417552B8D31990048442B /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		BF0417572B8D33910048442B /* PaymentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
+		BF087D552B909B9100A376D2 /* ProductModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductModel.xcdatamodel; sourceTree = "<group>"; };
 		BF2CD2072B8F3237003820D5 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		BF2CD2092B8F39B1003820D5 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		BF2CD20E2B8F64EA003820D5 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BF46762D2B8D626E002338FA /* SignOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutButton.swift; sourceTree = "<group>"; };
 		BFF0BE5A2B8CC52A005D9849 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BFF0BE5D2B8CC674005D9849 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				BF0417432B8D20910048442B /* Product.swift */,
+				BF2CD20E2B8F64EA003820D5 /* DataController.swift */,
+				BF087D542B909B9100A376D2 /* ProductModel.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,6 +246,8 @@
 				BFF0BE602B8CC745005D9849 /* SignUpView.swift in Sources */,
 				BFF0BE622B8CD538005D9849 /* AuthView.swift in Sources */,
 				BFF3103F2B8CBE2100E3E8E8 /* ContentView.swift in Sources */,
+				BF2CD20F2B8F64EA003820D5 /* DataController.swift in Sources */,
+				BF087D562B909B9100A376D2 /* ProductModel.xcdatamodeld in Sources */,
 				BFF0BE5E2B8CC674005D9849 /* String.swift in Sources */,
 				BF0417492B8D27A30048442B /* CartButton.swift in Sources */,
 				BF04174D2B8D2A980048442B /* ProductRow.swift in Sources */,
@@ -474,6 +482,19 @@
 			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		BF087D542B909B9100A376D2 /* ProductModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF087D552B909B9100A376D2 /* ProductModel.xcdatamodel */,
+			);
+			currentVersion = BF087D552B909B9100A376D2 /* ProductModel.xcdatamodel */;
+			path = ProductModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BFF310312B8CBE2100E3E8E8 /* Project object */;
 }

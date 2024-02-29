@@ -4,7 +4,7 @@ struct Product: Identifiable {
     var id = UUID()
     var name: String
     var image: String
-    var price: Int
+    var price: Double
 }
 
 var productList = [Product(name: "Orange sweater", image: "sweater1", price: 54),

@@ -11,6 +11,10 @@ class PaymentHandler: NSObject {
     var paymentStatus = PKPaymentAuthorizationStatus.failure
     var completionHandler: PaymentCompletionHandler?
     
+   
+    var products: [Product] = []
+    var dataController: DataController?
+
     static let supportedNetworks: [PKPaymentNetwork] = [
         .visa,
         .masterCard,
@@ -45,7 +49,7 @@ class PaymentHandler: NSObject {
         return []
     }
     
-    func startPayment(products: [Product], total: Int, completion: @escaping PaymentCompletionHandler) {
+    func startPayment(products: [Product], total: Double, completion: @escaping PaymentCompletionHandler) {
         completionHandler = completion
         
         // Reset the paymentSummaryItems array before adding to it
@@ -101,7 +105,20 @@ extension PaymentHandler: PKPaymentAuthorizationControllerDelegate {
 
     func paymentAuthorizationControllerDidFinish(_ controller: PKPaymentAuthorizationController) {
         controller.dismiss {
-            // The payment sheet doesn't automatically dismiss once it has finished, so dismiss the payment sheet
+            
+                        DispatchQueue.main.async {
+                            if self.paymentStatus == .success {
+                                // Save each sold product using DataController
+                                self.products.forEach { product in
+                                    self.dataController?.saveProductAsClothes(product: product) // Adjust quantity as needed
+                                }
+                                self.completionHandler?(true)
+                            } else {
+                                self.completionHandler?(false)
+                            }
+                        }
+                    
+                
             DispatchQueue.main.async {
                 if self.paymentStatus == .success {
                     if let completionHandler = self.completionHandler {

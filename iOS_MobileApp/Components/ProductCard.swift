@@ -3,7 +3,8 @@ import SwiftUI
 struct ProductCard: View {
     @EnvironmentObject var cartManager: CartManager
     var product: Product
-    
+    @StateObject private var dataController = DataController()
+
     var body: some View {
         ZStack(alignment: .topTrailing) {
             ZStack(alignment: .bottom) {
@@ -28,9 +29,11 @@ struct ProductCard: View {
             .frame(width: 180, height: 250)
             .shadow(radius: 3)
             
-            Button {
+            Button(action: {
                 cartManager.addToCart(product: product)
-            } label: {
+                // Call saveProductAsClothes method
+                dataController.saveProductAsClothes(product: product)
+            }) {
                 Image(systemName: "plus")
                     .padding(10)
                     .foregroundColor(.white)
@@ -48,4 +51,3 @@ struct ProductCard_Previews: PreviewProvider {
             .environmentObject(CartManager())
     }
 }
-
