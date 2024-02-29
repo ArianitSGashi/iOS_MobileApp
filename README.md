@@ -40,9 +40,9 @@ macOS Catalina or newer
 This app is built using the MVVM (Model-View-ViewModel) architecture pattern to promote separation of concerns and enhance maintainability. It extensively utilizes SwiftUI for its declarative UI components and data-driven approach.
 
 ## Technologies Used
-SwiftUI for the user interface
-Firebase Authentication for user sign-in and sign-up
-Core Data for local data storage and retrieval
-Apple Pay for secure payment processing
-Contributing
+- SwiftUI for the user interface
+- Firebase Authentication for user sign-in and sign-up
+- Core Data for local data storage and retrieval
+- Apple Pay for secure payment processing
+
 
